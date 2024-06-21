@@ -5,7 +5,7 @@ def gallery(request):
     context = {}
     return render(request, 'photos/gallery.html', context)
 
-def viewPhoto(request):
+def viewPhoto(request, pk):
     context = {}
     return render(request, 'photos/photos.html', context)
 
