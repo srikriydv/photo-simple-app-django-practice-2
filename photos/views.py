@@ -17,7 +17,7 @@ def gallery(request):
 def viewPhoto(request, pk):
     photo = Photo.objects.get(id=pk)
     context = {'photo': photo}
-    return render(request, 'photos/photo.html', context)
+    return render(request, 'photos/photos.html', context)
 
 def addPhoto(request):
     categories = Category.objects.all()
