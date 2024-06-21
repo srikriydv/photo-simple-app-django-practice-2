@@ -1,29 +1,39 @@
-{% extends "photos/main.html" %}
-
-{% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-header">
-                      Catagories
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">All</li>
-                      <li class="list-group-item">An item</li>
-                      <li class="list-group-item">A second item</li>
-                      <li class="list-group-item">A third item</li>
-                    </ul>
-                  </div>
-            </div>
-            <div class="col-md-9 ml-0">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                  </div>
-            </div>
-        </div>
+{% extends "photos/main.html" %} {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">Catagories</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">All</li>
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">
+            <a href="{% url "add-photo" %}" class="btn btn-dark btn-block btn-sm m-1">Add Photo </a>
+          </li>
+        </ul>
+      </div>
     </div>
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card my-2">
+            <img
+              class="image-thumbnail"
+              src="https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
+              alt="cat"
+            />
+            <div class="card-body">
+              <small>
+                Catagory: Pets
+              </small>
+              <a href="{% url "view-photo" 1 %}" class="btn btn-outline-dark btn-sm m-1"> views </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}
