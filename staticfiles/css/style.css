@@ -1,6 +1,0 @@
-/* static/css/style.css */
-
-body {
-    margin: 2rem; /* equivalent to m-2 in Bootstrap */
-    margin-top: 0 !important; /* override any inline style for margin-top */
-}
